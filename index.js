@@ -8,6 +8,7 @@ InitiateMongoServer();
 const app = express();
 app.use(cors());
 app.use(express.json());
+const PORT = process.env.PORT || 3000;
 
 /**
  * Router Middleware
@@ -23,6 +24,6 @@ app.get('/', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Server listening on PORT 3000');
+app.listen(PORT, () => {
+  console.log('Server listening');
 });
